@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EmbelezaDay — Landing
 
-## Getting Started
+Landing page e blog do SaaS [EmbelezaDay](https://app.embelezaday.com.br) — agenda online para salões e profissionais autônomas de beleza.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router + Turbopack)
+- **Tailwind CSS 4** (CSS-first config)
+- **TypeScript**
+- **Resend** para envio do formulário de contato
+- Hospedado na **Vercel**
+
+## Estrutura
+
+```
+app/
+├── layout.tsx           Root layout, metadata, GTM
+├── page.tsx             Landing (homepage)
+├── globals.css          Brand tokens (primary, accent, burgundy)
+└── api/contact/route.ts Endpoint do formulário → Resend
+
+components/
+├── Logo.tsx             Wrapper do <Image> da logo
+├── ui/                  Primitivos (Button, Container, SectionHeader)
+└── sections/            Seções da landing (Header, Hero, Features, etc.)
+
+public/
+├── logo.png             Lockup horizontal (2000×2000, transparente)
+├── icon.png             Ícone quadrado (512×512)
+├── icon-192.png         PWA / Android Chrome
+├── icon-512.png         PWA / Android Chrome
+└── apple-touch-icon.png iOS
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variáveis de ambiente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copia o `.env.example` pra `.env.local` em desenvolvimento:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cp .env.example .env.local
+```
 
-## Learn More
+| Variável | Obrigatório? | Descrição |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Sim | URL pública do site (metadata, OG, sitemap) |
+| `NEXT_PUBLIC_APP_URL` | Sim | URL do app SaaS (botões "Entrar" / "Teste grátis") |
+| `NEXT_PUBLIC_GTM_ID` | Não | ID do Google Tag Manager. Sem ele, GTM não é injetado |
+| `RESEND_API_KEY` | Não | API key do Resend. Sem ela, `/api/contact` apenas loga |
+| `CONTACT_EMAIL_TO` | Não | Email destinatário do formulário (default: costajeffe@gmail.com) |
+| `CONTACT_EMAIL_FROM` | Não | Email remetente (default: `EmbelezaDay <onboarding@resend.dev>`) |
 
-To learn more about Next.js, take a look at the following resources:
+## Comandos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev     # dev server em http://localhost:3000
+npm run build   # build de produção
+npm run start   # serve build de produção
+npm run lint    # ESLint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+Push em `main` → Vercel deploy automático.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Configurar todas as envs em Project → Settings → Environment Variables (Production e Preview).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Brand tokens
+
+Definidos em `app/globals.css` via `@theme`:
+
+- `primary-50 → 900` — paleta rose/mauve (espelhada do app SaaS)
+- `accent-50 → 600` — peach extraído da logo
+- `burgundy-700/800/900` — cor profunda da marca, headings e texto
