@@ -47,17 +47,13 @@ export default async function BlogIndexPage() {
                   className="group flex flex-col bg-white rounded-2xl border border-primary-100 overflow-hidden md:hover:shadow-lg md:hover:shadow-primary-500/5 md:hover:border-primary-200 md:transition-shadow"
                 >
                   <div className="aspect-[16/9] relative bg-primary-50 overflow-hidden">
-                    {post.cover ? (
-                      <Image
-                        src={post.cover}
-                        alt={post.coverAlt}
-                        fill
-                        sizes="(min-width: 768px) 50vw, 100vw"
-                        className="object-cover md:group-hover:scale-105 md:transition-transform md:duration-500"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-accent-100" />
-                    )}
+                    <Image
+                      src={post.cover || `/blog/${post.slug}/opengraph-image`}
+                      alt={post.coverAlt || post.title}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover md:group-hover:scale-105 md:transition-transform md:duration-500"
+                    />
                   </div>
                   <div className="flex-1 flex flex-col p-5 md:p-6">
                     <div className="flex items-center gap-2 text-[11px] font-medium text-primary-500/80 uppercase tracking-wide mb-3">
