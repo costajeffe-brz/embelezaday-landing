@@ -38,20 +38,14 @@ export const metadata: Metadata = {
     description:
       'Compartilhe um link e seus clientes agendam direto na sua agenda — sem confusão, sem sobreposição, sem perder tempo no WhatsApp.',
     siteName: 'EmbelezaDay',
-    images: [
-      {
-        url: '/icon.png',
-        width: 512,
-        height: 512,
-        alt: 'EmbelezaDay',
-      },
-    ],
+    // Imagem OG é gerada automaticamente via app/opengraph-image.tsx (1200x630)
+    // e por app/blog/[slug]/opengraph-image.tsx para cada artigo.
   },
   twitter: {
     card: 'summary_large_image',
     title: 'EmbelezaDay — Agenda online para salões',
     description: 'Seu cliente preenche sozinho. Você atende em paz.',
-    images: ['/icon.png'],
+    // Imagem twitter:image é resolvida pela mesma convenção de opengraph-image.
   },
   icons: {
     icon: [

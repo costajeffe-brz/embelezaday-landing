@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   description:
     'Conteúdo prático para profissionais de beleza: gestão de salão, agendamento online, fidelização de clientes e mais.',
   alternates: { canonical: '/blog' },
+  openGraph: {
+    title: 'Blog · EmbelezaDay',
+    description:
+      'Conteúdo prático para profissionais de beleza: gestão de salão, agendamento online, fidelização de clientes e mais.',
+    url: '/blog',
+    type: 'website',
+  },
 }
 
 export default async function BlogIndexPage() {
