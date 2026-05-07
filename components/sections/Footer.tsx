@@ -14,8 +14,8 @@ export function Footer() {
               className="h-10 w-auto brightness-0 invert opacity-90"
             />
             <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-sm">
-              Agenda online para salões e profissionais autônomas.
-              Menos WhatsApp, mais clientes atendidas.
+              Agenda online para salões e profissionais da beleza.
+              Menos WhatsApp, mais clientes atendidos.
             </p>
 
             <nav className="mt-8 grid grid-cols-2 gap-y-2 gap-x-6 text-sm">

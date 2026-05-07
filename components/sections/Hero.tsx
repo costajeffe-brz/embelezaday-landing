@@ -21,19 +21,19 @@ export function Hero() {
         <div className="text-center max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary-600 bg-primary-50 px-3 py-1.5 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-primary-500" />
-            Gestão para salões e profissionais autônomas
+            Gestão para salões e profissionais da beleza
           </span>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-bold text-burgundy-900 leading-[1.05] tracking-tight">
-            A agenda online que sua{' '}
+            A agenda online que seus{' '}
             <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
-              cliente preenche sozinha
+              clientes preenchem sozinhos
             </span>
           </h1>
 
           <p className="mt-5 text-lg md:text-xl text-burgundy-800/70 leading-relaxed max-w-2xl mx-auto">
             Pare de responder &ldquo;tem horário sexta?&rdquo; no WhatsApp.
-            Compartilhe um link e suas clientes agendam direto na sua agenda — sem sobreposição, sem confusão.
+            Compartilhe um link e seus clientes agendam direto na sua agenda — sem sobreposição, sem confusão.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">

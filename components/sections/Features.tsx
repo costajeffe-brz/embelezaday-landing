@@ -11,7 +11,7 @@ const FEATURES = [
   {
     icon: Link2,
     title: 'Link público de agendamento',
-    description: 'Compartilhe um link no Instagram ou WhatsApp e suas clientes marcam horário sozinhas, sem chat.',
+    description: 'Compartilhe um link no Instagram ou WhatsApp e seus clientes marcam horário sozinhos, sem chat.',
   },
   {
     icon: Users,

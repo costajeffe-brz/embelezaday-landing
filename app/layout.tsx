@@ -14,11 +14,11 @@ const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'EmbelezaDay — Agenda online para salões e profissionais autônomas',
+    default: 'EmbelezaDay — Agenda online para salões e profissionais da beleza',
     template: '%s · EmbelezaDay',
   },
   description:
-    'Agenda online com link público para suas clientes agendarem sozinhas. Menos WhatsApp, mais clientes atendidas. Teste grátis por 14 dias.',
+    'Agenda online com link público para seus clientes agendarem sozinhos. Menos WhatsApp, mais clientes atendidos. Teste grátis por 14 dias.',
   keywords: [
     'agenda online salão',
     'agenda salão de beleza',
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: SITE_URL,
-    title: 'EmbelezaDay — Agenda online para salões e profissionais autônomas',
+    title: 'EmbelezaDay — Agenda online para salões e profissionais da beleza',
     description:
-      'Compartilhe um link e suas clientes agendam direto na sua agenda — sem confusão, sem sobreposição, sem perder tempo no WhatsApp.',
+      'Compartilhe um link e seus clientes agendam direto na sua agenda — sem confusão, sem sobreposição, sem perder tempo no WhatsApp.',
     siteName: 'EmbelezaDay',
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'EmbelezaDay — Agenda online para salões',
-    description: 'Sua cliente preenche sozinha. Você atende em paz.',
+    description: 'Seu cliente preenche sozinho. Você atende em paz.',
     images: ['/icon.png'],
   },
   icons: {

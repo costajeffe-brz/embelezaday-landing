@@ -19,8 +19,9 @@ const PLANS: Plan[] = [
   {
     id: 'essencial',
     name: 'Essencial',
-    description: 'Ideal para autônomas começando.',
+    description: 'Ideal pra quem está começando.',
     price: '39,90',
+    highlight: true,
     features: [
       'Até 100 clientes cadastrados',
       'Agenda online com link público',
@@ -34,7 +35,6 @@ const PLANS: Plan[] = [
     description: 'Para salões de até 3 profissionais.',
     price: '79,90',
     comingSoon: true,
-    highlight: true,
     features: [
       'Clientes ilimitados',
       'Lembretes automáticos por WhatsApp',

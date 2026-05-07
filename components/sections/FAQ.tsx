@@ -11,12 +11,12 @@ const FAQS = [
     a: 'Não. Os 14 dias grátis são liberados na hora do cadastro, sem cartão e sem cobrança automática ao final do período.',
   },
   {
-    q: 'Como minhas clientes agendam?',
-    a: 'Você recebe um link único (ex: embelezaday.com.br/agenda/seusalao) pra colar no Instagram, WhatsApp ou imprimir como QR Code. A cliente abre, escolhe o serviço, vê seus horários disponíveis e confirma o agendamento direto na sua agenda.',
+    q: 'Como meus clientes agendam?',
+    a: 'Você recebe um link único (ex: embelezaday.com.br/agenda/seusalao) pra colar no Instagram, WhatsApp ou imprimir como QR Code. O cliente abre, escolhe o serviço, vê seus horários disponíveis e confirma o agendamento direto na sua agenda.',
   },
   {
     q: 'Funciona no celular?',
-    a: 'Sim, 100%. O EmbelezaDay foi pensado pra rodar bem no celular, tanto pra você gerenciar quanto pra suas clientes agendarem.',
+    a: 'Sim, 100%. O EmbelezaDay foi pensado pra rodar bem no celular, tanto pra você gerenciar quanto pra seus clientes agendarem.',
   },
   {
     q: 'E se eu já uso outra agenda?',
