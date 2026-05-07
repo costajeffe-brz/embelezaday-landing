@@ -10,10 +10,11 @@ export function ContactForm() {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    const form = e.currentTarget
     setStatus('sending')
     setMessage('')
 
-    const formData = new FormData(e.currentTarget)
+    const formData = new FormData(form)
     const payload = {
       name: String(formData.get('name') ?? ''),
       email: String(formData.get('email') ?? ''),
@@ -32,7 +33,7 @@ export function ContactForm() {
       }
       setStatus('sent')
       setMessage('Mensagem enviada! Em breve a gente responde no email que você informou.')
-      e.currentTarget.reset()
+      form.reset()
     } catch (err) {
       setStatus('error')
       setMessage(err instanceof Error ? err.message : 'Erro inesperado')
