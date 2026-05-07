@@ -12,10 +12,11 @@ export function Header() {
         </a>
 
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-burgundy-800/80">
-          <a href="#beneficios" className="hover:text-primary-600 transition-colors">Benefícios</a>
-          <a href="#funcionalidades" className="hover:text-primary-600 transition-colors">Funcionalidades</a>
-          <a href="#precos" className="hover:text-primary-600 transition-colors">Preços</a>
-          <a href="#perguntas" className="hover:text-primary-600 transition-colors">Perguntas</a>
+          <a href="/#beneficios" className="hover:text-primary-600 transition-colors">Benefícios</a>
+          <a href="/#funcionalidades" className="hover:text-primary-600 transition-colors">Funcionalidades</a>
+          <a href="/#precos" className="hover:text-primary-600 transition-colors">Preços</a>
+          <a href="/blog" className="hover:text-primary-600 transition-colors">Blog</a>
+          <a href="/#perguntas" className="hover:text-primary-600 transition-colors">Perguntas</a>
         </nav>
 
         <div className="flex items-center gap-2">
