@@ -110,16 +110,22 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
               </div>
             </header>
 
-            <div className="aspect-[16/9] relative rounded-2xl overflow-hidden border border-primary-100 mb-10">
-              <Image
-                src={post.cover || `/blog/${slug}/opengraph-image`}
-                alt={post.coverAlt || post.title}
-                fill
-                priority
-                sizes="(min-width: 768px) 768px, 100vw"
-                className="object-cover"
-              />
-            </div>
+            {/* Hero image só quando o artigo tem um cover real configurado.
+                Sem cover, evitamos repetir o título da OG image logo acima do
+                <h1>. A OG image continua sendo usada no card da listagem
+                e em previews de compartilhamento (og:image). */}
+            {post.cover && (
+              <div className="aspect-[16/9] relative rounded-2xl overflow-hidden border border-primary-100 mb-10">
+                <Image
+                  src={post.cover}
+                  alt={post.coverAlt || post.title}
+                  fill
+                  priority
+                  sizes="(min-width: 768px) 768px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            )}
 
             <div className="prose prose-lg prose-burgundy max-w-none prose-headings:text-burgundy-900 prose-headings:font-bold prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-burgundy-800/80 prose-p:leading-relaxed prose-strong:text-burgundy-900 prose-li:text-burgundy-800/80 prose-blockquote:border-primary-300 prose-blockquote:bg-primary-50/40 prose-blockquote:py-1 prose-blockquote:rounded-r-lg">
               <MDXRemote
