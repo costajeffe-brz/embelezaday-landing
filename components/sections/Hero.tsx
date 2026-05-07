@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
+import { HeroMockup } from '@/components/HeroMockup'
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.embelezaday.com.br'
 
@@ -49,13 +50,11 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Mock visual placeholder — replace later with real product screenshot */}
+        {/* Mockup ilustrativo — pode ser substituído por screenshot real do app */}
         <div className="mt-14 md:mt-20 relative max-w-5xl mx-auto">
           <div className="absolute -inset-4 bg-gradient-to-br from-primary-200/40 to-accent-200/40 blur-2xl rounded-3xl" aria-hidden />
-          <div className="relative aspect-[16/10] rounded-2xl border border-primary-100 bg-gradient-to-br from-white to-primary-50/30 shadow-2xl shadow-primary-500/10 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center text-burgundy-700/40 text-sm font-medium">
-              [ Print do produto vai aqui ]
-            </div>
+          <div className="relative">
+            <HeroMockup />
           </div>
         </div>
       </Container>
